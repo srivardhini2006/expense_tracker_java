@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main1 {
@@ -12,7 +12,8 @@ public class Main1 {
             System.out.println("\n--- Expense Tracker ---");
             System.out.println("1. Add Expense");
             System.out.println("2. View Expenses");
-            System.out.println("3. Exit");
+            System.out.println("3. Show Total Spent");
+            System.out.println("4. Exit");
             System.out.print("Enter your choice: ");
 
             choice = sc.nextInt();
@@ -25,12 +26,15 @@ public class Main1 {
                     viewExpenses();
                     break;
                 case 3:
+                    showTotal();
+                    break;
+                case 4:
                     System.out.println("Exiting... Bye!");
                     break;
                 default:
                     System.out.println("Invalid choice. Try again.");
             }
-        } while (choice != 3);
+        } while (choice != 4);
     }
 
     static void addExpense() {
@@ -61,5 +65,19 @@ public class Main1 {
                                ", Category: " + e.category +
                                ", Note: " + e.note);
         }
+    }
+
+    static void showTotal() {
+        if (expenses.isEmpty()) {
+            System.out.println("No expenses recorded.");
+            return;
+        }
+
+        double total = 0;
+        for (Expense e : expenses) {
+            total += e.amount;
+        }
+
+        System.out.println("Total spent: ₹" + total);
     }
 }
