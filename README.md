@@ -1,4 +1,4 @@
-\# Expense Tracker (Java - Console App)
+&nbsp;# Expense Tracker (Java - Console App)
 
 
 
@@ -15,6 +15,8 @@ Version-controlled using Git \& GitHub.
 \- Add an expense (amount, category, note)
 
 \- View all expenses
+
+\- Show total amount spent
 
 \- Menu-driven console interface
 
@@ -46,15 +48,15 @@ Version-controlled using Git \& GitHub.
 
 2\. Choose option 2 to view expenses  
 
-3\. Choose option 3 to exit  
+3\. Choose option 3 to show total spent  
+
+4\. Choose option 4 to exit  
 
 
 
 \## 🚀 Future Improvements
 
 \- Delete expense  
-
-\- Show total spent  
 
 \- Save data to file  
 
